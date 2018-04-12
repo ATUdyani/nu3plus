@@ -1,0 +1,74 @@
+{
+ "data":[
+ 		{
+ 			"indexId":"0",
+ 			"name":"Banana",
+ 			"des":"",
+ 			"img_url":"https://www.pngpix.com/wp-content/uploads/2016/03/Bunch-of-Bananas-PNG-image.png",
+ 			"details":"Bananas are elliptically shaped fruits 'prepackaged' by Nature, featuring a firm, creamy flesh gift-wrapped inside a thick inedible peel. The banana plant grows 10 to 26 feet in height and belongs to the family Musaceae. Banana fruits grow in clusters of 50 to 150, with individual fruits grouped in bunches, known as hands, of 10 to 25 bananas.",
+ 			"nutritions":[
+ 			{"name":"Total Fat 7.7g","value":"12"},
+ 			{"name":"Cholesterol 0mg","value":"0"},
+ 			{"name":"Sodium 231mg","value":"10"},
+ 			{"name":"Total Carbohydrate 9.2g","value":"3"},
+ 			]
+ 		},
+ 		{
+ 			"indexId":"1",
+ 			"name":"Apple",
+ 			"des":"",
+ 			"img_url":"https://pngimg.com/uploads/apple/apple_PNG12429.png",
+ 			"details":"Apples are among the most popular types of fruit in the world.They are the fruit of the apple tree (Malus domestica), originally from Central Asia, and are grown all over the world.Apples are high in fiber, vitamin C and various antioxidants. They are also very filling, considering their low calorie content. Studies show that eating apples can have multiple benefits for health (1, 2, 3, 4).",
+ 			"nutritions":[
+ 			
+ 			{"name":"Total Fast 0g","value":"0"},
+ 			{"name":"Cholesterol 0mg","value":"0"},
+ 			{"name":"Sodium 1mg","value":"0"},
+ 			{"name":"Total Carbohydrate 14g","value":"5"},
+ 			{"name":"Vitamins A","value":"1"},
+ 			{"name":"Vitamins C","value":"8"},
+ 			{"name":"Calcium","value":"1"}
+ 			]
+
+ 		},
+ 		{
+ 			"indexId":"2",
+ 			"name":"Pineapple",
+ 			"des":"",
+ 			"img_url":"http://pngimg.com/uploads/pineapple/pineapple_PNG2743.png",
+ 			"details":"Scientifically known as Citrus limon, lemons are among the world’s most popular citrus fruits.They grow on lemon trees, and are a hybrid of the original citron and lime.There are many ways to enjoy lemons, but they taste very sour and are usually not eaten as whole fruit.Instead, they are eaten in little slices, as garnish with meals, and their juice is often used to provide a sour flavor. They are also a key ingredient in lemonade.Lemons are a great source of vitamin C and fiber, and contain many plant compounds, minerals and essential oils.",
+ 			"nutritions":[
+ 			
+ 			{"name":"Total Fast 17g","value":"26"},
+ 			{"name":"Cholesterol 74mg","value":"25"},
+ 			{"name":"Sodium 1012mg","value":"42"},
+ 			{"name":"Total Carbohydrate 24.2g","value":"8"},
+ 			{"name":"Vitamins A","value":"1"},
+ 			{"name":"Vitamins C","value":"27"},
+ 			{"name":"Calcium","value":"3"}
+ 			]
+
+ 		},
+ 		{
+ 			"indexId":"3",
+ 			"name":"Lemon",
+ 			"des":"",
+ 			"img_url":"http://pngimg.com/uploads/lemon/lemon_PNG25200.png",
+ 			"details":"Apples are among the most popular types of fruit in the world.They are the fruit of the apple tree (Malus domestica), originally from Central Asia, and are grown all over the world.Apples are high in fiber, vitamin C and various antioxidants. They are also very filling, considering their low calorie content. Studies show that eating apples can have multiple benefits for health (1, 2, 3, 4).",
+ 			"nutritions":[
+ 			
+ 			{"name":"Total Fast 0g","value":"0"},
+ 			{"name":"Cholesterol 0mg","value":"0"},
+ 			{"name":"Sodium 1mg","value":"0"},
+ 			{"name":"Total Carbohydrate 14g","value":"5"},
+ 			{"name":"Vitamins A","value":"1"},
+ 			{"name":"Vitamins C","value":"8"},
+ 			{"name":"Calcium","value":"1"}
+ 			]
+
+ 		}
+
+
+ ]
+
+}
