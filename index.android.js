@@ -13,8 +13,6 @@ import {
   Image
 } from 'react-native';
 
-
-
 import { Container, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
 
 import viewpage from './src/components/viewpage';
@@ -29,8 +27,7 @@ var ROUTES = {
   viewpage:viewpage,
   frontpage:frontpage,
   vegpage:vegpage,
-  fruitpage:fruitpage
-
+  fruitpage:fruitpage,
 };
 export default class nu3plus extends Component {
     renderScene(route, navigator) {

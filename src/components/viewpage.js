@@ -7,9 +7,8 @@ import {
   Image
 } from 'react-native';
 
-
 import ProgressBar from 'react-native-progress';
-var data = require('../../data.json');
+//var data = require('../../data.json');
 import { Container, Content, Card, CardItem, Thumbnail,Header,Title,Right, Text, Button, Icon, Left, Body } from 'native-base';
 export default class viewpage extends Component {
   constructor(props) {
@@ -31,43 +30,48 @@ export default class viewpage extends Component {
 
     //var detail = data.data[detailid];
     if(this.props.type =="veg"){
-    this._executeQuery('https://nu3plus-api-arunadj.c9users.io/api/vegetables/'+detailid);
+    this._executeQuery('https://nutriplus-arunadj.c9users.io/api/vegetables/'+detailid);
     }
     else if(this.props.type =="fruit"){
-      this._executeQuery('https://nu3plus-api-arunadj.c9users.io/api/fruits/'+detailid);
+      //alert(detailid);
+      this._executeQuery('https://nutriplus-arunadj.c9users.io/api/fruits/'+detailid);
     }
    // this.setState({
     //  nutsource: this.state.nutsource.cloneWithRows(detail.nutritions)
 
     //});
   }
+
     _executeQuery(query) {
     console.log(query);
 
     fetch(query)
-    .then(res => this._handleResponse(JSON.parse(res._bodyInit)))
+    .then(res => {
+      //alert(JSON.stringify(res));
+      this._handleResponse(JSON.parse(res._bodyInit));
+    })
     .catch(error =>
-       alert('error'+error)
+       console.log('error'+error)
      );
     }
+
     _handleResponse(response) {
-    
    // if (response.application_response_code.substr(0, 1) === '1') {
-    var objar=[];
+      var objar=[];
       for(n=0;n<response.nutritions.length;n++){
+        //alert(JSON.stringify(response.nutritions[n]));
         var jsonar=JSON.parse(JSON.stringify(response.nutritions[n]));
-        var jsonobj=JSON.parse(jsonar);
+        //var jsonobj=JSON.parse(jsonar);
         //alert(jsonobj);
-        objar.push(jsonobj);
+        objar.push(jsonar);
       }
       //var jsonar=JSON.parse(JSON.stringify(response.nutritions));
       // var ob ={"json":jsonar}; 
      // alert(ob.json);
       this.setState({
       nutsource: this.state.nutsource.cloneWithRows(objar),
-      data:response
-
-    });
+      data: response
+      });
    // } else {
    //   alert('Location not recognized; please try again.');
    // }
@@ -85,16 +89,14 @@ export default class viewpage extends Component {
     }
 
     return (
-         
-            
             <View style={styles.data}>
-              <Text style={{textAlign: 'center'}}>{rowData.name}  </Text>
+              <Text style={{textAlign: 'center'}}>{rowData.name} </Text>
               <Text style={{marginLeft:30,textAlign: 'center'}}>{rowData.value}</Text>
             </View>
           
     );
   }
-      render() {
+  render() {
      // var detailid=this.props.detailId;
      // var detail = data.data[detailid];
       
@@ -132,7 +134,7 @@ export default class viewpage extends Component {
 
                                 <ListView
                                   dataSource={this.state.nutsource}
-                                  renderRow={this.renderNutRow.bind(this)}/>
+                                  renderRow={this.renderNutRow.bind(this)} enableEmptySections={true}/>
 
                             </Body>
                         </CardItem>

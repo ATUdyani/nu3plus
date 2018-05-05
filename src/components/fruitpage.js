@@ -9,9 +9,6 @@ import {
   Image
 } from 'react-native';
 
-
-
-
 import { Container, Content, Card, CardItem, Thumbnail, Text, Button,Center, Icon, Left, Body ,Header,Title,Right,InputGroup, Input,List,ListItem} from 'native-base';
 var data = require('../../data.json');
 var Spinner = require('react-native-spinkit');
@@ -67,7 +64,7 @@ export default class mainpage extends Component {
 
   componentDidMount() {
     this._handleResponse=this._handleResponse.bind(this);
-  	this._executeQuery('https://nu3plus-api-arunadj.c9users.io/api/fruits');
+  	this._executeQuery('https://nutriplus-arunadj.c9users.io/api/fruits');
   	//this.setState({
     //  source: this.state.source.cloneWithRows(this.state.data)
 
@@ -112,7 +109,7 @@ export default class mainpage extends Component {
                 </View>
                 <ListView
 			        dataSource={this.state.source}
-			        renderRow={this.renderRow.bind(this)}/>
+			        renderRow={this.renderRow.bind(this)} enableEmptySections={true}/>
                 
             </Content>
         </Container>

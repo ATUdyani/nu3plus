@@ -15,6 +15,8 @@ import Fruit from './fruitpage';
 import Veg from './vegpage';
 import { Container, Content, Card, CardItem, Thumbnail, Text, Button,Center, Icon, Left, Body ,Header,Title,Right,InputGroup, Input,List,ListItem,Tab, Tabs} from 'native-base';
 
+
+
 export default class frontpage extends Component {
 	render() {
     return (

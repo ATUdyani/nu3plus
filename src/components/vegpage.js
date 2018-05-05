@@ -68,7 +68,7 @@ export default class vegpage extends Component {
 
   componentDidMount() {
     this._handleResponse=this._handleResponse.bind(this);
-  	this._executeQuery('https://nu3plus-api-arunadj.c9users.io/api/vegetables');
+  	this._executeQuery('https:/nutriplus-arunadj.c9users.io/api/vegetables');
   //	this.setState({
    //   source: this.state.source.cloneWithRows(this.state.data)
 
@@ -113,7 +113,7 @@ export default class vegpage extends Component {
                 </View>
                 <ListView
 			        dataSource={this.state.source}
-			        renderRow={this.renderRow.bind(this)}/>
+			        renderRow={this.renderRow.bind(this)} enableEmptySections={true}/>
                 
             </Content>
         </Container>
