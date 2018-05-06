@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
-import { Container, Header, Content, Form, Item, Input, Button } from 'native-base';
+import {View, Text, Image, StyleSheet } from 'react-native';
+import { Container, Header, Content, Form, Item, Input, Button, SocialIcon} from 'native-base';
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 export default class Splash extends Component{
 
@@ -44,20 +46,43 @@ loginPressed(indexId){
 						</Text>
 					</View>
 
+
 					<View style={styles.signupBtn}>
-						<Button success onPress={() => this.signupPressed()}><Text>Sign Up</Text></Button>
+						<Button style={{width: 150}} success onPress={() => this.signupPressed()}><Text>Sign Up</Text></Button>
 					</View>
 
+
 					<View style={styles.loginBtn}>
-						<Text >{"\n"}Already a user?</Text>					
-						<Button transparent success onPress={() => this.loginPressed()}><Text>Log In</Text></Button>
+						<View style={styles.buttonContainer}>
+							<Text style={{marginLeft: 30}} >{"\n"}Already a user?</Text>	
+						</View>
+						<View style={styles.buttonContainer}>
+							<Button transparent success onPress={() => this.loginPressed()}><Text>Log In</Text></Button>
+						</View>
 					</View>
+
+					<View style={styles.container}>
+     					<View style={styles.buttonContainer}>
+      						<Button>
+            					<Icon name='facebook' size={25} color='white' />
+            					<Text> Facebook</Text>
+          					</Button>
+    					</View>
+    					<View style={styles.buttonContainer}>
+      						<Button>
+            					<Icon name='google' size={25} color='white' />
+            					<Text>  Google</Text>
+          					</Button>
+   						</View>
+  					</View>
+
+					
 				</View>
 
 				
 
 				<View>
-				<Text style={styles.subtitle}></Text>
+				<Text style={styles.subtitle}>Powered by Group</Text>
 				</View>
 			</View>
 
@@ -68,6 +93,7 @@ loginPressed(indexId){
 const styles=StyleSheet.create({
 
 	wrapper:{
+
 		backgroundColor:'#e5e5e5',
 		flex:3,
 		justifyContent:'center',
@@ -89,12 +115,13 @@ const styles=StyleSheet.create({
 		height:150,
 		width:250,
 		resizeMode: 'contain',
+		marginTop: 50,
 
 	},
 
 	signupBtn:{
 		marginTop: 100,
-		marginLeft: 80,
+		marginLeft: 50,
 
 	},
 
@@ -103,9 +130,22 @@ const styles=StyleSheet.create({
 	},
 
 	loginBtn:{
-		marginLeft: 80,
+		flex: 1,
+	    flexDirection: 'row',
 
 	},
+
+	container: {
+	    flex: 1,
+	    flexDirection: 'row',
+	    alignItems: 'center',
+	    justifyContent: 'center',
+
+  	},
+
+	buttonContainer: {
+	  	flex: 1,
+	}
 	
 
 });
