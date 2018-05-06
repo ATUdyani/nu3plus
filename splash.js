@@ -57,7 +57,7 @@ loginPressed(indexId){
 				
 
 				<View>
-				<Text style={styles.subtitle}>Powered by Group</Text>
+				<Text style={styles.subtitle}></Text>
 				</View>
 			</View>
 
