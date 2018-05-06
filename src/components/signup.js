@@ -5,12 +5,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class FormExample extends Component {
 
- signupPressed(indexId){
-    
-    this.props.navigator.push({
-    name: "signup2",
-    });
-  }
 
   loginPressed(indexId){
     
