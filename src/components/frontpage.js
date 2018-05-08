@@ -20,8 +20,8 @@ import { Container, Content, Card, CardItem, Thumbnail, Text, Button,Center, Ico
 export default class frontpage extends Component {
 	render() {
     return (
-      <Container>
-      	<Header hasTabs>
+      <Container >
+      	<Header hasTabs >
             
             <Body>
             

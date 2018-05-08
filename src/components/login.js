@@ -22,7 +22,7 @@ export default class FormExample extends Component {
    forgotPressed(indexId){
     
     this.props.navigator.push({
-    name: "frontpage",
+    name: "mainTabs",
     });
   }
 

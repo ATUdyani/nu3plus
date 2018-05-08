@@ -94,7 +94,7 @@ const styles=StyleSheet.create({
 
 	wrapper:{
 
-		backgroundColor:'#e5e5e5',
+		/*backgroundColor:'#e5e5e5',*/
 		flex:3,
 		justifyContent:'center',
 		alignItems:'center'

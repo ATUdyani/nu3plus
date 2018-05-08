@@ -16,7 +16,7 @@ export default class FormExample extends Component {
   submitPressed(indexId){
     
     this.props.navigator.push({
-    name: "frontpage",
+    name: "mainTabs",
     });
   }
 

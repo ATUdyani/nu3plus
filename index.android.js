@@ -22,7 +22,7 @@ import fruitpage from './src/components/fruitpage';
 import vegpage from './src/components/vegpage';
 import signup from './src/components/signup';
 import login from './src/components/login';
-
+import mainTabs from './src/components/mainTabs';
 
 var ROUTES = {
   splash:Splash,
@@ -32,6 +32,7 @@ var ROUTES = {
   fruitpage:fruitpage,
   signup:signup,
   login:login,
+  mainTabs:mainTabs,
 
 };
 export default class nu3plus extends Component {
