@@ -36,6 +36,10 @@ export default class viewpage extends Component {
       //alert(detailid);
       this._executeQuery('https://nutriplus-arunadj.c9users.io/api/fruits/'+detailid);
     }
+    else if(this.props.type =="recipe"){
+      //alert(detailid);
+      this._executeQuery('https://nutriplus-arunadj.c9users.io/api/recipes/'+detailid);
+    }
    // this.setState({
     //  nutsource: this.state.nutsource.cloneWithRows(detail.nutritions)
 

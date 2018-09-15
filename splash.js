@@ -48,7 +48,10 @@ loginPressed(indexId){
 
 
 					<View style={styles.signupBtn}>
-						<Button style={{width: 150}} success onPress={() => this.signupPressed()}><Text>Sign Up</Text></Button>
+						<Button 
+						style={{width: 150, backgroundColor:'#a4da22'}}  onPress={() => this.signupPressed()}>
+						<Text style={{color:'#ffffff',marginLeft: 30,fontSize: 18 }}>Sign Up</Text>
+						</Button>
 					</View>
 
 
@@ -57,21 +60,21 @@ loginPressed(indexId){
 							<Text style={{marginLeft: 30}} >{"\n"}Already a user?</Text>	
 						</View>
 						<View style={styles.buttonContainer}>
-							<Button transparent success onPress={() => this.loginPressed()}><Text>Log In</Text></Button>
+							<Button transparent success onPress={() => this.loginPressed()}><Text style={{fontWeight: 'bold'}}>  Log In</Text></Button>
 						</View>
 					</View>
 
 					<View style={styles.container}>
      					<View style={styles.buttonContainer}>
-      						<Button>
+      						<Button style={{backgroundColor:'#4267B2'}}> 
             					<Icon name='facebook' size={25} color='white' />
-            					<Text> Facebook</Text>
+            					<Text style={{color:'#ffffff'}}> Facebook</Text>
           					</Button>
     					</View>
     					<View style={styles.buttonContainer}>
-      						<Button>
+      						<Button style={{backgroundColor:'#d34836'}}>
             					<Icon name='google' size={25} color='white' />
-            					<Text>  Google</Text>
+            					<Text style={{color:'#ffffff'}}>  Google</Text>
           					</Button>
    						</View>
   					</View>
@@ -123,7 +126,9 @@ const styles=StyleSheet.create({
 		marginTop: 100,
 		marginLeft: 50,
 
+
 	},
+
 
 	description:{
 		marginTop: 50

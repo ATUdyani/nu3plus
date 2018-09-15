@@ -65,7 +65,7 @@ export default class mainpage extends Component {
 
   componentDidMount() {
     this._handleResponse=this._handleResponse.bind(this);
-  	this._executeQuery('https://nutriplus-arunadj.c9users.io/api/fruits');
+  	this._executeQuery('https://nutriplus-arunadj.c9users.io/api/recipes');
   	//this.setState({
     //  source: this.state.source.cloneWithRows(this.state.data)
 
@@ -75,7 +75,7 @@ export default class mainpage extends Component {
   	
   	this.props.navigator.push({
     name: "viewpage",
-    passProps: {detailId: indexId,type:"fruit"}
+    passProps: {detailId: indexId,type:"recipe"}
   	});
   }
   
@@ -99,7 +99,6 @@ export default class mainpage extends Component {
 		<Container>
 		
             <Content>
-            <Text h2>Fruits</Text>
             	<InputGroup>
                     <Icon name="ios-search" />
                     <Input placeholder="Search" value={this.state.searchString} onChange={this.onSearchTextChanged.bind(this)}/>

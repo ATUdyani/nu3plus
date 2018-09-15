@@ -23,6 +23,9 @@ import vegpage from './src/components/vegpage';
 import signup from './src/components/signup';
 import login from './src/components/login';
 import mainTabs from './src/components/mainTabs';
+import homepage from './src/components/homepage';
+import recipepage from './src/components/recipepage';
+
 
 var ROUTES = {
   splash:Splash,
@@ -33,7 +36,8 @@ var ROUTES = {
   signup:signup,
   login:login,
   mainTabs:mainTabs,
-
+  homepage:homepage,
+  recipepage:recipepage,
 };
 export default class nu3plus extends Component {
     renderScene(route, navigator) {

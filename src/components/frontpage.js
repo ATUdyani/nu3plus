@@ -21,17 +21,16 @@ export default class frontpage extends Component {
 	render() {
     return (
       <Container >
-      	<Header hasTabs >
+      	<Header hasTabs style={{backgroundColor:'#a4da22'}}  >
             
-            <Body>
+            <Body >
             
                 <Title>Foods</Title>
                 
             </Body>
-           <Right/>
          </Header>
         
-        <Tabs initialPage={0}>
+        <Tabs initialPage={0} style={{backgroundColor:'#a4da22'}} >
           <Tab heading="Fruit">
             <Fruit navigator={this.props.navigator} />
           </Tab>

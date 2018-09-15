@@ -11,8 +11,8 @@ import {
 
 
 
-import Fruit from './fruitpage';
-import Veg from './vegpage';
+import Home from './homepage';
+import Recipe from './recipepage';
 import { Container, Content, Card, CardItem, Thumbnail, Text, Button,Center, Icon, Left, Body ,Header,Title,Right,InputGroup, Input,List,ListItem,Tab, Tabs, TabHeading} from 'native-base';
 
 
@@ -47,10 +47,10 @@ export default class frontpage extends Component {
 
                   <Tabs initialPage={0}>
                   <Tab heading={ <TabHeading><Icon name="home" /><Text>Home</Text></TabHeading>}>
-                    <Fruit navigator={this.props.navigator} />
+                    <Home navigator={this.props.navigator} />
                   </Tab>
-                  <Tab heading={ <TabHeading><Icon name="home" /><Text>My Respies</Text></TabHeading>}>
-                    <Veg navigator={this.props.navigator} />
+                  <Tab heading={ <TabHeading><Icon name="home" /><Text>My Recipes</Text></TabHeading>}>
+                    <Recipe navigator={this.props.navigator} />
                   </Tab>
           
                 </Tabs>

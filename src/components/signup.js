@@ -5,7 +5,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class FormExample extends Component {
 
-
   loginPressed(indexId){
     
     this.props.navigator.push({
@@ -16,7 +15,7 @@ export default class FormExample extends Component {
   submitPressed(indexId){
     
     this.props.navigator.push({
-    name: "mainTabs",
+    name: "homepage",
     });
   }
 
@@ -25,7 +24,7 @@ export default class FormExample extends Component {
       <Container>
 
           <View style={{marginLeft: 280}}>
-            <Button transparent success onPress={() => this.loginPressed()}><Text>Log In</Text></Button>
+            <Button transparent success onPress={() => this.loginPressed()}><Text style={{fontWeight: 'bold'}}>Log Innnnnnnnn</Text></Button>
           </View>
           <Content>
             <View style={styles.wrapper}>
@@ -63,7 +62,11 @@ export default class FormExample extends Component {
 
                 
                 <View style={styles.submitBtn}>
-                  <Button style={{width: 150}} success onPress={() => this.submitPressed()}><Text>Submit</Text></Button>
+                  <Button 
+                  style={{width: 150,backgroundColor:'#a4da22'}}
+                   onPress={() => this.submitPressed()}>
+                   <Text style={{color:'#ffffff',marginLeft: 30,fontSize: 18 }}>Submit</Text>
+                   </Button>
                 </View>
 
               </View>
@@ -81,14 +84,15 @@ export default class FormExample extends Component {
 const styles=StyleSheet.create({
 
   wrapper:{
-   
     justifyContent:'center',
     alignItems:'center'
   },
+
   subtitle:{
     color:'#34495e',
     fontWeight:'200'
   },
+  
   titleWrapper:{
     
     justifyContent:'center'

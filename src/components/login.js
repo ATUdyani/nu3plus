@@ -19,7 +19,7 @@ export default class FormExample extends Component {
     });
   }
 
-   forgotPressed(indexId){
+  forgotPressed(indexId){
     
     this.props.navigator.push({
     name: "mainTabs",
@@ -30,8 +30,8 @@ export default class FormExample extends Component {
     return (
       <Container>
 
-          <View style={{marginLeft: 280}}>
-            <Button transparent success onPress={() => this.signupPressed()}><Text>Sign Up</Text></Button>
+          <View style={{marginLeft: 260}}>
+            <Button transparent success onPress={() => this.signupPressed()}><Text style={{fontWeight: 'bold'}}>Sign Up</Text></Button>
           </View>
           <Content>
             <View style={styles.wrapper}>
@@ -61,7 +61,11 @@ export default class FormExample extends Component {
 
                 
                 <View style={styles.submitBtn}>
-                  <Button style={{width: 150}} success onPress={() => this.submitPressed()}><Text>Submit</Text></Button>
+                  <Button 
+                  style={{width: 150, backgroundColor:'#a4da22'}} 
+                  onPress={() => this.submitPressed()}>
+                  <Text style={{color:'#ffffff',marginLeft: 30,fontSize: 18 }}>Submit</Text>
+                  </Button>
                 </View>
 
                 <View style={styles.forgotBtn}>
@@ -75,15 +79,15 @@ export default class FormExample extends Component {
 
                  <View style={styles.container}>
                   <View style={styles.buttonContainer}>
-                    <Button>
+                    <Button style={{backgroundColor:'#4267B2'}}>
                         <Icon name='facebook' size={25} color='white' />
-                        <Text> Facebook</Text>
+                        <Text style={{color:'#ffffff'}}> Facebook</Text>
                       </Button>
                   </View>
                   <View style={styles.buttonContainer}>
-                  <Button>
+                  <Button style={{backgroundColor:'#d34836'}}>
                       <Icon name='google' size={25} color='white' />
-                      <Text>  Google</Text>
+                      <Text style={{color:'#ffffff'}}>  Google</Text>
                     </Button>
                   </View>
             </View>
