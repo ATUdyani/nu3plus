@@ -97,12 +97,31 @@ export default class vegpage extends Component {
      
     );
   }
+
+  comeback(){
+
+    this.props.navigator.pop();
+  }
 	
 	render(){
 	return(
 		<Container>
+    <Header>
+            <Left>
+                <Button transparent onPress={this.comeback.bind(this)}>
+                    <Icon name='arrow-back'/>
+                </Button>
+            </Left>
+            <Body>
+            
+                <Title>Vegetables</Title>
+                
+            </Body>
+           <Right/>
+         </Header>
 		
             <Content>
+
             	<InputGroup>
                     <Icon name="ios-search" />
                     <Input placeholder="Search" value={this.state.searchString} onChange={this.onSearchTextChanged.bind(this)}/>

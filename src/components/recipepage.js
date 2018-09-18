@@ -25,6 +25,11 @@ export default class mainpage extends Component {
     	};
 	}
 
+
+comeback(){
+
+    this.props.navigator.pop();
+  }
 	
 	
 
@@ -97,8 +102,22 @@ export default class mainpage extends Component {
 	render(){
 	return(
 		<Container>
+     <Header>
+            <Left>
+                <Button transparent onPress={this.comeback.bind(this)}>
+                    <Icon name='arrow-back'/>
+                </Button>
+            </Left>
+            <Body>
+            
+                <Title>Recipes</Title>
+                
+            </Body>
+           <Right/>
+         </Header>
 		
             <Content>
+
             	<InputGroup>
                     <Icon name="ios-search" />
                     <Input placeholder="Search" value={this.state.searchString} onChange={this.onSearchTextChanged.bind(this)}/>

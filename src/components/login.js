@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Content, Form, Item, Input, Button } from 'native-base';
+import { Container, Header, Content, Form, Item, Input, Button, Left,Body,Title,Right } from 'native-base';
 import {View, Text, Image, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -15,7 +15,7 @@ export default class FormExample extends Component {
   submitPressed(indexId){
     
     this.props.navigator.push({
-    name: "frontpage",
+    name: "homepage",
     });
   }
 
@@ -25,10 +25,22 @@ export default class FormExample extends Component {
     name: "mainTabs",
     });
   }
+  comeback(){
+
+    this.props.navigator.pop();
+  }
 
   render() {
     return (
       <Container>
+
+            <View style={{alignItems: 'center'}}>
+                
+                    <Button transparent onPress={this.comeback.bind(this)}>
+                        <Icon name='arrow-left'/>
+                    </Button>
+                              
+             </View>
 
           <View style={{marginLeft: 260}}>
             <Button transparent success onPress={() => this.signupPressed()}><Text style={{fontWeight: 'bold'}}>Sign Up</Text></Button>

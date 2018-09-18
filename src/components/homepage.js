@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {View, Text, Image, StyleSheet } from 'react-native';
-import { Container, Header, Content, Form, Item, Input, Button, SocialIcon} from 'native-base';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { Container, Header, Content, Form, Item, Input, Button, SocialIcon, Left,Body,Title,Right,Icon} from 'native-base';
+//import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default class Home extends Component{
@@ -36,43 +36,62 @@ vegPressed(indexId){
     });
   }
 
+comeback(){
+
+    this.props.navigator.pop();
+  }
+  
 
 	render(){
 		return(
-			<View style={styles.wrapper}>
-				<View style={styles.titleWrapper}>
+			<Container>
+				<Header>
+		            <Left>
+		                <Button transparent onPress={this.comeback.bind(this)}>
+		                    <Icon name='arrow-back'/>
+		                </Button>
+		            </Left>
+		            <Body>
+		            
+		                <Title>Home</Title>
+		                
+		            </Body>
+		           <Right/>
+		         </Header>
+				<View style={styles.wrapper}>
+					<View style={styles.titleWrapper}>
 
-					<Image
-						style={styles.logo}
-						source={require('../img/newLogo.png')}/>
+						<Image
+							style={styles.logo}
+							source={require('../img/newLogo.png')}/>
 
-					<View style={styles.fruitBtn}>
-						<Button 
-						style={{width: 280, backgroundColor:'#a4da22'}}  onPress={() => this.fruitPressed()}>
-						<Text style={{color:'#ffffff',marginLeft: 50,fontSize: 18 }}>Fruits</Text>
-						</Button>
-					</View>
+						<View style={styles.fruitBtn}>
+							<Button 
+							style={{width: 280, backgroundColor:'#a4da22'}}  onPress={() => this.fruitPressed()}>
+							<Text style={{color:'#ffffff',marginLeft: 50,fontSize: 18, textAlign: 'center' }}>Fruits</Text>
+							</Button>
+						</View>
 
-					<View style={styles.fruitBtn}>
-						<Button 
-						style={{width: 280, backgroundColor:'#a4da22'}}  onPress={() => this.vegPressed()}>
-						<Text style={{color:'#ffffff',marginLeft: 50,fontSize: 18 }}>Vegetables</Text>
-						</Button>
-					</View>
+						<View style={styles.fruitBtn}>
+							<Button 
+							style={{width: 280, backgroundColor:'#a4da22'}}  onPress={() => this.vegPressed()}>
+							<Text style={{color:'#ffffff',marginLeft: 50,fontSize: 18, textAlign: 'center'  }}>Vegetables</Text>
+							</Button>
+						</View>
 
-					<View style={styles.fruitBtn}>
-						<Button 
-						style={{width: 280, backgroundColor:'#a4da22'}}  onPress={() => this.recipePressed()}>
-						<Text style={{color:'#ffffff',marginLeft: 50,fontSize: 18 }}>Recipes</Text>
-						</Button>
+						<View style={styles.fruitBtn}>
+							<Button 
+							style={{width: 280, backgroundColor:'#a4da22'}}  onPress={() => this.recipePressed()}>
+							<Text style={{color:'#ffffff',marginLeft: 50,fontSize: 18, textAlign: 'center' }}>Recipes</Text>
+							</Button>
+						</View>
+
+						
 					</View>
 
 					
 				</View>
-
-				
-			</View>
-
+			</Container>
 		);
 	}
 }
@@ -102,25 +121,25 @@ const styles=StyleSheet.create({
 	    width:200,
 	    resizeMode: 'contain',
 	    marginLeft: 50,
-	    marginTop: 0,
-	    marginBottom:100
+	    marginTop: 10,
+	    marginBottom:10
 
 	},
 
 	fruitBtn:{
-		marginTop: 40,
+		marginTop: 20,
 		marginLeft: 50,
 		marginRight: 50
 	},
 
 	vegBtn:{
-		marginTop: 60,
+		marginTop: 40,
 		marginLeft: 50,
 		marginRight: 50
 
 	},
 	recipBtn:{
-		marginTop: 80,
+		marginTop: 60,
 		marginLeft: 50,
 		marginRight: 50
 	},

@@ -78,6 +78,11 @@ export default class mainpage extends Component {
     passProps: {detailId: indexId,type:"fruit"}
   	});
   }
+
+  comeback(){
+
+    this.props.navigator.pop();
+  }
   
   renderRow(rowData, sectionID, rowID) {
   	
@@ -97,9 +102,22 @@ export default class mainpage extends Component {
 	render(){
 	return(
 		<Container>
+     <Header>
+            <Left>
+                <Button transparent onPress={this.comeback.bind(this)}>
+                    <Icon name='arrow-back'/>
+                </Button>
+            </Left>
+            <Body>
+            
+                <Title>Fruits</Title>
+                
+            </Body>
+           <Right/>
+         </Header>
 		
             <Content>
-            <Text h2>Fruits</Text>
+
             	<InputGroup>
                     <Icon name="ios-search" />
                     <Input placeholder="Search" value={this.state.searchString} onChange={this.onSearchTextChanged.bind(this)}/>

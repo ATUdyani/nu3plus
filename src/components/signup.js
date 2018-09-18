@@ -19,12 +19,24 @@ export default class FormExample extends Component {
     });
   }
 
+  comeback(){
+
+    this.props.navigator.pop();
+  }
+
   render() {
     return (
       <Container>
+            <View style={{alignItems: 'center'}}>
+                
+                    <Button transparent onPress={this.comeback.bind(this)}>
+                        <Icon name='arrow-left'/>
+                    </Button>
+                              
+             </View>
 
           <View style={{marginLeft: 280}}>
-            <Button transparent success onPress={() => this.loginPressed()}><Text style={{fontWeight: 'bold'}}>Log Innnnnnnnn</Text></Button>
+            <Button transparent success onPress={() => this.loginPressed()}><Text style={{fontWeight: 'bold'}}>Log In</Text></Button>
           </View>
           <Content>
             <View style={styles.wrapper}>
